@@ -27,10 +27,10 @@ def handle_response(text: str) -> str:
     return 'I dont understand. Please try again.'
     
 async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    message_type = update.message.message.chat.type
+    message_type = update.message.chat.type
     text: str = update.message.text
     
-    print(f'User ({update.message.chat.id}) in {message_type}say:"{text}"')
+    print(f'User ({update.message.chat.id}) in {message_type} chat said: "{text}"')
     
     if message_type =='group':
         if BOT_USERNAME in text:
@@ -45,7 +45,9 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(response)
     
 async def error(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    print(f"Update {update} caused error {context.error}")
+    print(f'Update {update} caused error {context.error}')
+    
+    
     
     
 if __name__ == '__main__':
