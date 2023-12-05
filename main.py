@@ -2,7 +2,7 @@ from typing import Final
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 # Define your bot token here
-TOKEN: Final = '6972955324:AAFhOMDYnYT8yQIOY98MwAjH8LI6fFBHsuA'
+TOKEN: Final = '6972955324:AAEEMxYdWi8o_TLnPUigGYSnGapzt3NLmKo'
 BOT_USERNAME: Final = '@teleframeb_bot'
 #commands
 async def start_command(update: Update, context: ContextTypes.DEFAULT_TYPE):
